@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="PasswordEncoder"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="PasswordEncoder"/>
+			<item value="stripe"/>
+			<item value="oneTO"/>
+			<item value="2010"/>
+			<item value="repo"/>
+			<item value="pack"/>
+			<item value="jar"/>
+			<item value="basedir"/>
+			<item value="build"/>
+			<item value="filter"/>
+			<item value="a1"/>
+			<item value="rese"/>
+			<item value="run"/>
+			<item value="topic"/>
+			<item value="Before Sending Message"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1294"/>
+		<item key="DIALOG_Y_ORIGIN" value="321"/>
+		<item key="DIALOG_WIDTH" value="385"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="575"/>
+		<item key="DIALOG_Y_ORIGIN" value="325"/>
+	</section>
+</section>

@@ -1,0 +1,10 @@
+package com.app.stack;
+
+public class StackClass {
+ public static void main(String[] args) {
+	
+}
+ public void push(int data) {
+	 
+ }
+}

@@ -1,0 +1,20 @@
+package com.java8.programe.GroupBy;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class MainClass {
+public static void main(String[] args) {
+	List<Employee> list=new ArrayList<>();
+	list.add(new Employee(1, "Raj", "Mechanical", true, 25000));
+	list.add(new Employee(2, "Bipin", "Mechanical", true, 35000));
+	list.add(new Employee(3, "Prakash", "Electrical", false, 45000));
+	list.add(new Employee(4, "Vikash", "Electrical", true, 37000));
+	
+Map<String, List<Employee>> emp =	list.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.toList()));
+
+emp.entrySet().forEach(k->System.out.println(k.getKey()+ "  "+k.getValue()));
+}
+}

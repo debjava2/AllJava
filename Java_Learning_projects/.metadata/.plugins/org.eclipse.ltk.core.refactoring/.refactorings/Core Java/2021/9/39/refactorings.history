@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lamda.Stream.Sort.Sorting&apos; to &apos;SortingList&apos;&#x0D;&#x0A;- Original project: &apos;Core Java&apos;&#x0D;&#x0A;- Original element: &apos;com.lamda.Stream.Sort.Sorting&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lamda.Stream.Sort.SortingList&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Sorting&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.lamda.Stream.Sort{Sorting.java[Sorting" matchStrategy="1" name="SortingList" qualified="false" references="true" similarDeclarations="false" stamp="1632305065251" textual="false" version="1.0"/>
+</session>

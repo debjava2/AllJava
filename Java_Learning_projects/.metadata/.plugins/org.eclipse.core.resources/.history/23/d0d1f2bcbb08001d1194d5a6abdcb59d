@@ -1,0 +1,47 @@
+package com.Algo.Java8Optional.Stream.Interview.RealTimeQuestionOnEmployee;
+
+import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import com.Algo.Java8Optional.Stream.Interview.RealTimeQuestionOnEmployee.Employee;
+
+
+
+
+
+public class MainCLass {
+public static void main(String[] args) {
+	//How Many Male and Female Employess are there in Organization
+	List<com.Algo.Java8Optional.Stream.Interview.RealTimeQuestionOnEmployee.Employee> list=EmployeeList.getList();
+	
+	//list.stream().collect(Collectors.groupingBy(Employee::getGender),Collectors.counting())
+	
+	
+	list.stream().collect(Collectors.
+			groupingBy(com.Algo.Java8Optional.Stream.Interview.RealTimeQuestionOnEmployee.Employee::getGender,Collectors.counting())).
+	forEach((k,v)->System.out.println(k+"  :  "+v));
+	//List All The Department
+	list.stream().collect(Collectors.groupingBy(com.Algo.Java8Optional.Stream.Interview.RealTimeQuestionOnEmployee.Employee::getDepartment))
+			.forEach((k,v)->System.out.println(k));
+	
+	//Another Way
+	System.out.println("################################# Another Way");
+	
+	list.stream()
+    .map(Employee::getDepartment)
+    .distinct()
+    .forEach(System.out::println);
+	
+	//Average age of male and Female Employee......
+	System.out.println(" //Average age of male and Female Employee......");
+	Map<String, Double> avgAgeOfMaleAndFemaleEmployees=
+	list.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
+	avgAgeOfMaleAndFemaleEmployees.forEach((k,v)->System.out.println(k +" Average age: "+v));
+	
+	//Get the higest paid employee in the Organization
+	Map<String, Optional<Employee>> higestPaid=list.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
+	
+	higestPaid.forEach((k,v)->System.out.println(k+"  : " +v.get().salary););
+}
+}

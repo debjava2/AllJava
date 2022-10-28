@@ -1,0 +1,38 @@
+package com.app.DolubleLinkedList;
+
+public class DoubleListNode {
+	
+	public Node head;
+	public Node tail;
+	public int length;
+	public class Node{
+		public int data;
+		public Node prevoius;
+		public Node next;
+		
+		Node(int data){
+			this.data=data;
+		}
+	}
+	
+	public void insertLast(int data) {
+		Node node=new Node(data);
+		if(isEmpty()) {
+			head=node;
+		}else {
+			tail.next=node;
+		}
+		head.prevoius=tail;
+		tail=node;
+		length++;
+	}
+	public static void main(String[] args) {
+		DoubleListNode pb=new DoubleListNode();
+		pb.insertLast(10);
+		pb.insertLast(20);
+	}
+	
+	public boolean isEmpty(){
+		return length==0;
+	}
+}

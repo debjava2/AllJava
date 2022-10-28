@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.app.MainClass&apos; to &apos;ExportJarExample&apos;&#x0D;&#x0A;- Original project: &apos;TestingJar&apos;&#x0D;&#x0A;- Original element: &apos;com.app.MainClass&apos;&#x0D;&#x0A;- Renamed element: &apos;com.app.ExportJarExample&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MainClass&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.app{MainClass.java[MainClass" matchStrategy="1" name="ExportJarExample" qualified="false" references="true" similarDeclarations="true" stamp="1663169504586" textual="false" version="1.0"/>
+</session>

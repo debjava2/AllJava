@@ -1,0 +1,14 @@
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MainClass {
+public static void main(String[] args) {
+	List<Employee> list=EmployeeDb.getAll();
+	list.stream().map(Employee::getDepartment)
+	.distinct().forEach(k->System.out.println(k));
+	
+	list.stream().
+	collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()))
+	.forEach((k,v)->System.out.println(k+": "+v));
+}
+}

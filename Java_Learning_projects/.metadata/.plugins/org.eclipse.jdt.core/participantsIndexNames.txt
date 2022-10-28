@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\WorkSpace\Java_Learning_projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3167142476.index
+\LoggerProject\src\main\resources
+C:\WorkSpace\Java_Learning_projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3183743623.index
+\LogBackProject\src\main\resources
+C:\WorkSpace\Java_Learning_projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1198589166.index
+\Logger\src\main\resources

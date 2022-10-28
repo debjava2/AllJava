@@ -1,0 +1,52 @@
+package com.Algo.Java8Optional.Stream.Interview.Wipro;
+
+import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class WiproInterview {
+public static void main(String[] args) {
+	List<Employee> list=EmployeeDb.getData();
+	Employee emp=list.stream().reduce((Employee t, Employee u)->  t.getSalary()>u.getSalary()? t:u
+	).get();
+	
+	System.out.println(emp);
+	
+	Employee emp2=list.stream().max(Comparator.comparingDouble(Employee::getSalary)).get();
+	System.out.println(emp2);
+	System.out.println("#############################");
+	
+	//Print Highest Salary from each Department.
+	list.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.maxBy
+			(Comparator.comparingDouble(Employee::getSalary)))).
+	forEach((k,v)->System.out.println(k+":  "+v));;
+	System.out.println("#############################");
+	list.stream().
+	collect(Collectors.groupingBy(Employee::getDepartment,
+			Collectors.minBy(Comparator.comparingDouble(Employee::getSalary)))).
+	forEach((k,v)->System.out.println(k+":    "+v));
+	
+	System.out.println("#############################");
+	//Programe to Print Active Employee
+	
+	list.stream().filter((Employee t) -> t.getActive().contains("yes"))
+	.forEach((p)->System.out.println(p));
+	;
+	
+	System.out.println("#############################");
+	
+	list.stream().collect(Collectors.
+			groupingBy(Employee::getActive,Collectors.counting())).
+	forEach((k,v)->System.out.println(k+"  :  "+v));
+	//List of People Working in each departament
+	list.stream().collect
+	(Collectors.groupingBy(Employee::getDepartment)).forEach((k,v)->System.out.println(k+"  :  "+v));
+	
+	Comparator<Employee> emp22=Comparator.comparing(Employee::getName).thenComparingDouble(Employee::getSalary);
+	
+	List<Employee> listEMp=list.stream().sorted(emp22).collect(Collectors.toList());
+	
+	
+}}

@@ -1,0 +1,22 @@
+package com.javatechie.aws.lambda.respository;
+
+public class Reverse {
+public static void main(String[] args) {
+	call(-320);
+}
+public static int  call(int x) {
+	StringBuilder b=new StringBuilder();
+	boolean flag=false;
+	if(x<0) {
+		x=-x;
+		flag=true;
+	}
+	String k=b.append(x).reverse().toString();
+	int c=0;
+	if(flag)
+		c=(int) -Long.parseLong(k);
+		else
+			c=(int) Long.parseLong(k);
+	return c;
+}
+}

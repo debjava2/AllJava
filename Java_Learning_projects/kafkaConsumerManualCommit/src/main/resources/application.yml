@@ -1,0 +1,52 @@
+
+spring:
+  profiles:
+    active: local
+server:
+  port: 8082
+
+---
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Phone_bill
+    username: root
+    password: mysql
+    
+  profiles: local
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: library-events-listener-group
+      auto-offset-reset: earliest
+
+---
+
+spring:
+  profiles: nonprod
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: library-events-listener-group
+
+---
+
+spring:
+  profiles: prod
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: library-events-listener-group
+      
+      
+
+

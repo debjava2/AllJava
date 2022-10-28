@@ -1,0 +1,5 @@
+package com.javatechie.aws.lambda.respository;
+
+public class MaxProductSubarray {
+
+}

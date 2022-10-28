@@ -1,0 +1,28 @@
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MainClass {
+public static void main(String[] args) {
+	List<Employee> list=EmployeeDb.getAll();
+	list.stream().map(Employee::getDepartment)
+	.distinct().forEach(k->System.out.println(k));
+	
+	list.stream().
+	collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()))
+	.forEach((k,v)->System.out.println(k+": "+v));
+	
+	list.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)))
+	.forEach((k,v)->System.out.println(k+" : "+v));
+	
+	String val="My name is nitin and i can speak malayalam";
+	String[] arr=val.split(" ");
+	int count=0;
+	for(String name:arr) {
+		String name2=name;
+		StringBuilder builder=new StringBuilder(name);
+		if(builder.reverse().equals(name2))
+			count++;
+	}
+	System.out.println(count);
+}
+}

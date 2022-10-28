@@ -1,0 +1,40 @@
+package com.lerankafka.unit;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.lerankafka.controller.LibraryEventController;
+import com.lerankafka.domain.Book;
+import com.lerankafka.domain.LibraryEvent;
+
+@WebMvcTest(LibraryEventController.class)
+@AutoConfigureMockMvc
+public class KafkaLibrarayEventUnitTestCase {
+	
+	
+	@Autowired
+	MockMvc mockMvc;
+	
+
+	@Test
+	void postLibarayEvent() {
+		
+		Book book=Book.builder().bookId(123)
+				.bookAuthor("Raj")
+				.bookName("Tales From the Villege")
+				.build();
+	 
+
+	LibraryEvent libEvent=LibraryEvent.builder()
+							.libraryEvent(null)
+							.book(book).build();
+	
+
+	
+	}
+	
+	
+}

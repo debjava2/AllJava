@@ -1,0 +1,13 @@
+package com.app.Recursion;
+
+public class RecursiveMethod {
+public void  recursiveI(int data) {
+	if(data<1) {
+		System.out.println("n is less then 1");
+	}
+	else {
+		recursiveI(data-1);
+		System.out.println(data);
+	}
+}
+}

@@ -1,0 +1,26 @@
+package com.app.DolubleLinkedList;
+
+public class MainClassDouble {
+public static void main(String[] args) {
+	DoubleListNode list=new DoubleListNode(10);
+	DoubleListNode list1=new DoubleListNode(20);
+	DoubleListNode list2=new DoubleListNode(30);
+	DoubleListNode list3=new DoubleListNode(40);
+	DoubleListNode list4=new DoubleListNode(50);
+	DoubleListNode list5=new DoubleListNode(60);
+	list.next=list1;
+	list1.next=list2;
+	list1.previous=list;
+	list2.next=list3;
+	list2.previous=list1;
+	list3.next=list4;
+	list3.previous=list2;
+	list4.next=list5;
+	list4.previous=list3;
+	
+	while(list.next!=null)
+	{
+		System.out.println(list.data);
+	}
+}
+}

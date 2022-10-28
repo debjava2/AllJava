@@ -1,0 +1,47 @@
+package com.app.GeeksForGeeksLinkedList;
+
+public class LinkedList {
+	Node head;
+	static class Node{
+		int data;
+		Node next;
+		Node(int d){
+			data=d;
+			next=null;
+		}
+	}
+	
+	public void show() {
+	Node n=head;
+	while(n!=null) {
+		System.out.println(n.data);
+		n=n.next;
+	}
+	}
+	
+	public void deleteFirst() {
+		head=head.next;
+		/*
+		 * Node n=head; while(n!=null) { System.out.println(n.data); n=n.next; }
+		 */
+	}
+	
+	public void deleteLastNode() {
+		Node currentNode=head;
+		Node previousToCurrent=null;
+		while(currentNode.next!=null) {
+			previousToCurrent=currentNode;
+			currentNode=currentNode.next;
+		}
+		previousToCurrent.next=null;
+	}
+	
+	public void deleteAtPosition(int position) {
+		/*
+		 * int cunt =1; Node prevoius=head; while(count<position) {
+		 * prevoius=prevoius.next; count++; } Node current=prevoius.next;
+		 * prevoius=prevoius.next.next; current.next=null;
+		 */
+	
+	}
+}

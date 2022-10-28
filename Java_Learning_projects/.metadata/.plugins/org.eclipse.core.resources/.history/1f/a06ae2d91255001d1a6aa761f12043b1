@@ -1,0 +1,13 @@
+package com.app.Recursion;
+
+public class Palindrome {
+public static void main(String[] args) {
+	
+}
+public static String reverse(String str)
+{
+ if(str.length()==0)
+ return temp;
+ return temp+str.charAt(str.length()-1)+reverse(str.substring(0, str.length()-1));
+}
+}

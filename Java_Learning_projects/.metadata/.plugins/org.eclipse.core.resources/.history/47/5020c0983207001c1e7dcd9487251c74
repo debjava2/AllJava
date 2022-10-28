@@ -1,0 +1,5 @@
+package com.lerankafka.unit;
+
+public class KafkaLibrarayEventUnitTestCase {
+
+}

@@ -1,0 +1,21 @@
+package com.javatechie.aws.lambda.respository;
+
+public class Reverse {
+public static void main(String[] args) {
+	System.out.println(call(-320));
+}
+public static int  call(int x) {
+	boolean flag=false;
+	if(x<0) {
+		x=-x;
+		flag=true;
+	}
+	int sum=0;
+	while(x>0) {
+		int remainder=x%10;
+		sum=sum*10+remainder;
+		x=x/10;
+	}
+	return (flag ? -sum:sum);
+}
+}

@@ -1,0 +1,8 @@
+2022-09-21 08:32:29,030 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,035 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,036 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,036 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,037 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,037 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,037 [main] DEBUG  in.app.com.TestMain - hello
+2022-09-21 08:32:29,038 [main] INFO  in.app.com.TestMain - Hello, world

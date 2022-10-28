@@ -1,0 +1,44 @@
+package com.app.DolubleLinkedList;
+
+import com.app.DolubleLinkedList.DoubleLinkList.ListNode;
+
+public class InsertDataInDoubleLinkList {
+public static void main(String[] args) {
+	DoubleLinkList d=new DoubleLinkList();
+	d.head=new ListNode(10);
+	ListNode second=new ListNode(40);
+	ListNode third=new ListNode(20);
+	ListNode fourth=new ListNode(70);
+	ListNode fifth=new ListNode(50);
+	ListNode six=new ListNode(60);
+	d.head.next=second;
+	d.head.previous=null;
+	second.next=third;
+	second.previous=d.head;
+	third.next=fourth;
+	third.previous=second;
+	fourth.next=fifth;
+	fourth.previous=third;
+	fifth.next=six;
+	fifth.previous=fourth;
+	six.previous=fifth;
+	d.tail=six;
+	
+	//display all the items
+	
+	ListNode temp=d.head;
+	
+	while(temp!=null) {
+		System.out.println(temp.data);
+		temp=temp.next;
+	}
+	System.out.println("##################################");
+	ListNode temp2=d.tail;
+	while(temp2!=null) {
+		System.out.println(temp2.previous);
+		temp2=temp2.previous;
+	}
+	
+	
+}
+}

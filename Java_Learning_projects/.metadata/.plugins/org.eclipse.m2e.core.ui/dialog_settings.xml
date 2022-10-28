@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\WorkSpace\Java_Learning_projects\TestingJar"/>
+			<item value="C:\WorkSpace\Java_Learning_projects\AwsLamda"/>
+			<item value="C:\WorkSpace\Java_Learning_projects\Core Java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Test\springboot-aws-lambda-master"/>
+			<item value="C:\Test\springboot-aws-lamda"/>
+			<item value="C:\Study\CoreJava\Core_Java"/>
+			<item value="C:\Study\CoreJava\Core Java"/>
+			<item value="C:\CodePipeLine\AccountManagement"/>
+			<item value="C:\Maven_WorkSpace\DemoMavenProject"/>
+			<item value="C:\Hibernate\HibernateAnnotaion"/>
+			<item value="C:\WorkSpace\kafka-libraryevent\library-events-producer\library-events-producer"/>
+			<item value="C:\WorkSpace\AccountManagement\AccountMangement"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.hp.logger.Logger"/>
+			<item value="com.hp.logger.LogBackProject"/>
+			<item value="com.hp.logger"/>
+			<item value="com.kkjavatutorials.First_Demo_Project"/>
+			<item value="in.app.com"/>
+			<item value="in.javahome.lamda"/>
+		</list>
+		<list key="groupId">
+			<item value="com.hp.logger"/>
+			<item value="com.kkjavatutorials"/>
+			<item value="in.javahome"/>
+		</list>
+		<list key="artifactId">
+			<item value="Logger"/>
+			<item value="LogBackProject"/>
+			<item value="LoggerProject"/>
+			<item value="First-Demo-Project"/>
+			<item value="com.app"/>
+			<item value="lamda"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="838"/>
+		<item key="x" value="720"/>
+		<item key="y" value="0"/>
+	</section>
+</section>

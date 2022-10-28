@@ -1,0 +1,19 @@
+package com.javatechie.aws.lambda.respository;
+
+import java.util.*;
+
+public class ValidParenThesis {
+public static void main(String[] args) {
+	
+}
+
+public static boolean test(String val) {
+	Map<String,String> map=new HashMap();
+	map.put("(", ")");
+	map.put("{", "}");
+	map.put("[", "]");
+	String parentehsis = map.get(val);
+	
+	return false;
+}
+}

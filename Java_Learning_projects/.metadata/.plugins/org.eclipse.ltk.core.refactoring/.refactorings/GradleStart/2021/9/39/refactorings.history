@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;&#x0A;<refactoring comment="Rename resource &apos;GradleStart/GradleStart/src/main/java/hello/Greeter.java&apos; to &apos;HelloWord.java&apos;" description="Rename resource &apos;Greeter.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="GradleStart/src/main/java/hello/Greeter.java" name="HelloWord.java" stamp="1632125007559" updateReferences="true"/>&#x0A;</session>

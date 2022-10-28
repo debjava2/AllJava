@@ -1,0 +1,9 @@
+package com.app.GeeksForGeeksLinkedList;
+
+import com.app.GeeksForGeeksLinkedList.LinkedList.Node;
+
+public class CreateSingleLinkedList {
+	public static void main(String[] args) {
+		
+	}
+}

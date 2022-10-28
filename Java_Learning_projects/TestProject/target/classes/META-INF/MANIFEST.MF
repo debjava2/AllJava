@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: d39
+Build-Jdk: 15.0.1
+Class-Path: logback-classic-1.2.3.jar logback-core-1.2.3.jar slf4j-api-1
+ .7.25.jar
+Main-Class: in.app.com.TestMain
+Created-By: Maven Integration for Eclipse
+

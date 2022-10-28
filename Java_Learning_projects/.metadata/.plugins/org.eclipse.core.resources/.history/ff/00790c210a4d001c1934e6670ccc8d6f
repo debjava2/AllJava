@@ -1,0 +1,8 @@
+package com.app.DolubleLinkedList;
+
+public class InsertDataInDoubleLinkList {
+public static void main(String[] args) {
+	DoubleLinkList d=new DoubleLinkList();
+	
+}
+}

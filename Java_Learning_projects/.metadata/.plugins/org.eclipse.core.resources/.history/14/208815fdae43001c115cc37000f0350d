@@ -1,0 +1,7 @@
+package com.app.FactoryDesignPattern;
+
+public interface Pizza {
+public void create();
+public void bake();
+public void cut();
+}

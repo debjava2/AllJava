@@ -1,0 +1,11 @@
+package com.app.DolubleLinkedList;
+
+import com.app.DolubleLinkedList.DoubleLinkList.ListNode;
+
+public class InsertDataInDoubleLinkList {
+public static void main(String[] args) {
+	DoubleLinkList d=new DoubleLinkList();
+	d.head=new ListNode(0);
+	
+}
+}

@@ -1,0 +1,35 @@
+
+public class Recursion {
+
+	public int factorial(int a) {
+		if(a==1)
+			return  1;
+		return a*factorial(a-1);
+	}
+	public static void main(String[] args) {
+		Recursion ob=new Recursion();
+		System.out.println(ob.factorial(5));
+		String s1="Welcome";
+		String t=s1+"asdasdasd";
+		s1.concat("Bala");
+		System.out.println(s1);
+		Test ob11=new Test("asdasdasd");
+		System.out.println(ob11.getName());
+	}
+}
+
+
+//Create a Immutable class
+
+final class Test2{
+	final String name;
+	
+	public Test(String name) {
+		this.name = "Deb";
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+}

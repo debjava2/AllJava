@@ -1,0 +1,24 @@
+package com.app.FactoryDesignPattern;
+
+public class ChikeenPiza implements Pizza {
+
+	@Override
+	public void create() {
+		System.out.println("Create cheese Piza");
+
+	}
+
+	@Override
+	public void bake() {
+		// TODO Auto-generated method stub
+		System.out.println("Bake cheese Piza");
+	}
+
+	@Override
+	public void cut() {
+		// TODO Auto-generated method stub
+		System.out.println("cut cheese Piza");
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.app.GeeksForGeeksLinkedList;
+
+public class CreateSingleLinkedList {
+public static void main(String[] args) {
+	LinkedList list=new LinkedList();
+	
+}
+}

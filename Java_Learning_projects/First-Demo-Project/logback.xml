@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5level %d{HH:mm:ss.SSS} [%thread] %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+     <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+            <file>C:/Test/Debashish.log</file>
+            <encoder>
+                <pattern>%d [%thread] %level %mdc %logger{50} - %msg%n</pattern>
+            </encoder>
+        </appender>
+        
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="fileAppender" />
+    </root>
+    
+   
+</configuration>
+	

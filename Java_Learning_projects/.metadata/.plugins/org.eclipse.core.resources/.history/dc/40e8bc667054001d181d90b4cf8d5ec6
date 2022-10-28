@@ -1,0 +1,14 @@
+package com.app.Recursion;
+
+public class Gcd {
+public static void main(String[] args) {
+	System.out.println(gcdOf(8,12));
+}
+public static int gcdOf(int a ,int b) {
+	if(b==0) {
+		return b;
+	}
+	return gcdOf(a,b%a);
+	
+}
+}

@@ -1,0 +1,17 @@
+package com.app.FactoryDesignPattern;
+
+public class PizzaFactory {
+
+	public Pizza p=null;
+	
+	public Pizza order(String type) {
+		if(type.equalsIgnoreCase("veg"))
+			p=new VegPiza();
+		else if(type.equalsIgnoreCase("chicken"))
+			p=new ChikeenPiza();
+		else
+			p=new CheesePiza();
+		
+		return p;
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=CoreSppring/C:\/SpringCore_Jar\/spring-framework-5.0.0.RELEASE\/libs\/spring-context-5.0.0.RELEASE.jar&lt;org.springframework.format(FormatterRegistry.class[FormatterRegistry" modifiers="1537" timestamp="1506576726000"/>
+    <typeInfo handle="=CoreSppring/src&lt;com.foo.Spring{Coach.java[Coach" modifiers="513" timestamp="1659513206800"/>
+    <typeInfo handle="=CoreSppring/src&lt;com.foo.Spring{FortuneService.java[FortuneService" modifiers="513" timestamp="1659512735136"/>
+    <typeInfo handle="=CoreSpring3/src&lt;com.foo.Spring{Coach.java[Coach" modifiers="513" timestamp="1659588488916"/>
+    <typeInfo handle="=CoreSpring3/src&lt;com.foo.Spring{FortuneService.java[FortuneService" modifiers="513" timestamp="1659610396700"/>
+    <typeInfo handle="=CoreSpring3/C:\/SpringCore_Jar\/spring-framework-5.0.0.RELEASE\/libs\/spring-web-5.0.0.RELEASE.jar&lt;org.springframework.http.codec.multipart(FormFieldPart.class[FormFieldPart" modifiers="1537" timestamp="1506576756000"/>
+    <typeInfo handle="=spring-data-jpa-mapping/C:\/Users\/d39\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.2.0.RELEASE\/spring-data-jpa-2.2.0.RELEASE.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.2.0.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1660037415845"/>
+</typeInfoHistroy>

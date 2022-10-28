@@ -1,0 +1,8 @@
+package com.app.FactoryDesignPattern;
+
+public class Snippet {
+	public static void main(String[] args) {
+		VegPiza
+	}
+}
+

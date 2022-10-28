@@ -1,0 +1,11 @@
+package com.app.DolubleLinkedList;
+
+public class DoubleListNode {
+
+	public int data;
+	public DoubleListNode next;
+	public DoubleListNode previous;
+	DoubleListNode(int data){
+		this.data=data;
+	}
+}

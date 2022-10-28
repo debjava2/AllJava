@@ -1,0 +1,15 @@
+
+public class ImplementingClass implements A,B{
+public static void main(String[] args) {
+	A b=new ImplementingClass();
+	b.show();
+B k=new ImplementingClass();
+k.show();
+}
+
+@Override
+public void show() {
+	// TODO Auto-generated method stub
+	
+}
+}

@@ -1,0 +1,130 @@
+package com.hpe;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.google.gson.Gson;
+
+@SpringBootApplication
+public class TestKafkaApplication {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(TestKafkaApplication.class, args);
+		Gson gson = new Gson();
+		
+		JSONObject obj = new JSONObject();
+		JSONObject objMain;
+		JSONObject objIdoc;
+		JSONObject E1EXCHANGE_RATE;
+		JSONObject messages = null;
+		try {
+			 File f = new File("c:/MAST/EXCH_RATE_PAYLOAD.json");
+		        if (f.exists()){
+		        	byte[] encoded = Files.readAllBytes(Paths.get("c:/MAST/EXCH_RATE_PAYLOAD.json"));
+		        	
+		            String jsonTxt =  new String(encoded, "UTF-8");
+		            System.out.println(jsonTxt);
+		             messages = new JSONObject(jsonTxt);       
+		               
+		        }
+			
+			
+			
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			obj = new JSONObject(messages.toString());
+			
+			
+			if (obj.has("EXCHANGE_RATE01")) {
+				objMain = obj.getJSONObject("EXCHANGE_RATE01");
+				if (objMain.has("IDOC")) {
+					objIdoc = objMain.getJSONObject("IDOC");
+					if (objIdoc.has("E1EXCHANGE_RATE")) {
+						E1EXCHANGE_RATE = objIdoc.getJSONObject("E1EXCHANGE_RATE");
+
+						if (E1EXCHANGE_RATE.has("E1BP1093_0")) {
+
+							Object jsonItem1 = E1EXCHANGE_RATE.get("E1BP1093_0");
+							if (jsonItem1 instanceof JSONArray) {
+								String jsonarray = E1EXCHANGE_RATE.get("E1BP1093_0").toString();
+								JSONArray array = new JSONArray(jsonarray);
+								ArrayList<ExchangeRate> exchangeRateList = gson.fromJson(array.toString(), ArrayList.class);
+								if (exchangeRateList.size() > 0) {
+									for (int j = 0; j < exchangeRateList.size(); j++) {
+										JSONObject item = array.getJSONObject(j);
+										String json = gson.toJson(exchangeRateList.get(j));
+										ExchangeRate rate = gson.fromJson(json, ExchangeRate.class);
+
+										if (null != rate.getEXCH_RATE() && null != rate.getFROM_CURR()
+												&& null != rate.getRATE_TYPE() && null != rate.getTO_CURRNCY()
+												&& null != rate.getVALID_FROM()) {
+
+											if (rate.getRATE_TYPE().equalsIgnoreCase("M")
+													|| rate.getRATE_TYPE().equalsIgnoreCase("PXHW")
+													|| rate.getRATE_TYPE().equalsIgnoreCase("PX")
+													|| rate.getRATE_TYPE().equalsIgnoreCase("P")) {	
+												rate.setVALID_FROM(item.getString("VALID_FROM"));
+
+									//			rate.setPartitionId(partitions.get(0));
+												
+												System.out.println("--**--EXCHANGE RATES--Saving " + rate.toString());
+												
+											}
+
+										}
+									}
+									System.out.println("Here i am ");
+								}
+							}
+
+							else {
+								if (E1EXCHANGE_RATE.has("E1BP1093_0")) {
+								ExchangeRate rate = gson.fromJson(E1EXCHANGE_RATE.getString("E1BP1093_0").toString(),
+										ExchangeRate.class);
+								//rate.setPartitionId(partitions.get(0));
+								//exchangeRatesDao.saveExchangeRates(rate);
+								System.out.println(rate.toString());
+								}
+							}
+
+						}
+						else{
+							System.out.println(
+									"--**--NO EXCHANGE RATES--**--(E1EXCHANGE_RATE is Null)--");	
+						}
+					}
+				}
+			}
+		} catch (JSONException e) {
+			System.out.println("--**--CATCH BLOCK---**--");
+			e.printStackTrace();
+		}
+		try{
+		
+		System.out.println("saving here ");
+	} catch (Exception e) {
+		e.printStackTrace();
+		
+	}
+	
+
+
+
+		
+		
+	}
+
+}

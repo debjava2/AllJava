@@ -1,0 +1,32 @@
+package com.app.DolubleLinkedList;
+
+public class DoubleLinkList {
+
+	public ListNode head;
+	public ListNode tail;
+	public int length;
+
+	public class ListNode {
+		public int data;
+		public ListNode next;
+		public ListNode previous;
+
+		public ListNode(int data) {
+			this.data = data;
+		}
+	}
+
+	public DoubleLinkList() {
+		this.head = null;
+		this.tail = null;
+		this.length = 0;
+	}
+
+	public boolean isEmpty() {
+		return length == 0;
+	}
+
+	public int length() {
+		return length;
+	}
+}

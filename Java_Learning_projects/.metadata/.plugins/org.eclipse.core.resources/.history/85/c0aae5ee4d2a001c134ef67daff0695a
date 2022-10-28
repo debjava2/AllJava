@@ -1,0 +1,46 @@
+package com.springboot.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springboot.Model.Employee;
+import com.springboot.service.EmployeeService;
+
+@RestController
+public class EmployeeController {
+
+	@Autowired
+	EmployeeService service;
+	@PostMapping("/api/insert/")
+	public void insertData(@RequestBody Employee emp) {
+		String empId="E";
+		List<Employee> em=service.getAllEmployee();
+		int noEmp=em.size();
+		int nDigits =0;
+		noEmp=noEmp+1;
+		if(noEmp!=0) {
+			nDigits = (int) (Math.floor(Math.log10(Math.abs(noEmp))) + 1);
+		}
+		
+		if(nDigits>=2 && nDigits<3 ) {	
+			empId=empId+"0"+noEmp;
+		}else if(nDigits==1 || noEmp==0 ) {
+			empId=empId+"00"+noEmp;
+		}else {
+			empId=empId+noEmp;
+		}
+		emp.setEmpId(empId);
+		service.insertData(emp);
+	}
+	
+	@PutMapping("/api/update")
+	public Employee updateData(@RequestBody Employee emp) {
+		return service.updateEmployee(emp);
+	}
+}

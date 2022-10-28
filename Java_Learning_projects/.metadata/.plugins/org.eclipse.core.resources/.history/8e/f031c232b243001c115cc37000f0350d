@@ -1,0 +1,8 @@
+package com.app.FactoryDesignPattern;
+
+public class PizzaFactory {
+
+	public Pizza p=PizzaFactoryE.order(null);
+	
+	
+}

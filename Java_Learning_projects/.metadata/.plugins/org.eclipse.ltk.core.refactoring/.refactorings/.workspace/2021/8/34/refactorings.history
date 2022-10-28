@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;kafkaConsumer2&apos; to &apos;kafkaConsumerManualCommit&apos;" description="Rename resource &apos;kafkaConsumer2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/kafkaConsumer2" name="kafkaConsumerManualCommit" stamp="1629451679182" updateReferences="true"/>
+</session>
